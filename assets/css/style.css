@@ -1,0 +1,347 @@
+/* ==========================================================================
+   DESIGN TOKENS (CSS como arquitetura)
+   - Tudo que define identidade visual e medidas do sistema vive aqui.
+   - Componentes usam tokens para evitar “valores mágicos” espalhados.
+========================================================================== */
+
+:root {
+  --font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --text: #111;
+  --muted: #555;
+
+  --bg: #fafafa;
+  --surface: #fff;
+
+  --border: #cccccc;
+
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+
+  --radius-1: 12px;
+
+  --header-height: 56px;
+  --bottom-nav-height: 56px;
+  --sidebar-width: 280px;
+
+  --focus-ring: 3px solid #0969da;
+
+  --like-red: #ed4956;
+}
+
+/* ==========================================================================
+   RESET MÍNIMO (previsibilidade entre browsers)
+========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+}
+
+/* ==========================================================================
+   HEADER (topo)
+========================================================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  height: var(--header-height);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-container {
+  height: 100%;
+  display: grid;
+  grid: "start center end" 56px / 1fr 2fr 1fr;
+  place-items: center;
+  place-content: center;
+  padding-inline: var(--space-5);
+  gap: var(--space-2);
+}
+
+.header-start {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  grid-area: start;
+}
+
+.header-button-menu {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-button-menu img {
+  height: 100%;
+}
+
+.header-logo {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-logo img {
+  height: 100%;
+}
+
+.header-center {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  grid-area: center;
+}
+
+.header-input-search {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  cursor: text;
+}
+
+.header-input-search img {
+  width: 100%;
+}
+
+.header-button-search {
+  margin: 0;
+  padding: 0;
+  width: 57px;
+  height: 40px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header-button-search img {
+  width: 24px;
+}
+
+.header-end {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  grid-area: end;
+}
+
+.header-button-video {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-button-video img {
+  height: 100%;
+}
+
+.header-button-bell {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-button-bell img {
+  height: 100%;
+}
+
+.header-avatar {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-avatar img {
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   MAIN (layout geral)
+   - Desktop: sidebar fixa + conteúdo
+========================================================================== */
+.main {
+  display: grid;
+  min-height: calc(100vh - var(--header-height));
+  grid-template-columns: var(--sidebar-width) 1fr;
+  column-gap: var(--space-4);
+}
+
+.aside {
+  display: block;
+  height: calc(100vh - var(--header-height));
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  padding: var(--space-3);
+  position: sticky;
+  top: var(--header-height);
+}
+
+.aside-container {
+  padding-left: var(--space-3);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-items: center start;
+  place-content: center;
+  row-gap: var(--space-3);
+  column-gap: var(--space-3);
+}
+
+.aside-button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.aside-button img {
+  height: 24px;
+}
+
+.aside-container h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.aside-container h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-block: var(--space-3);
+  padding-bottom: var(--space-3);
+  padding-inline: var(--space-3);
+}
+
+.article-video {
+  width: 282px;
+  height: 262px;
+  display: grid;
+  grid:
+    "header header" 140px
+    "avatar title" 1fr
+    / 42px 4fr;
+  place-items: start space-between;
+  place-content: start;
+  padding: var(--space-3);
+  gap: var(--space-2);
+}
+
+.article-header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  grid-area: header;
+}
+
+.article-cover {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.article-cover img {
+  width: 100%;
+}
+
+.article-avatar {
+  margin: 0;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-area: avatar;
+}
+
+.article-avatar {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.article-avatar img {
+  width: 100%;
+}
+
+.article-title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  grid-area: title;
+}
+
+.article-title h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.article-title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
