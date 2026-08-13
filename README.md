@@ -8,6 +8,16 @@ O projeto faz parte da minha formação complementar em desenvolvimento Front-en
 
 🌐 **[Ver projeto online](https://dimelobarros.github.io/trilha-css-desafio-grid-layout/)**
 
+## Demonstração
+
+### Layout principal
+
+![YouTube - layout com sidebar e grid de vídeos](docs/screenshots/youtube-grid-layout.png)
+
+### Cards de vídeo
+
+![YouTube - organização dos cards de vídeo](docs/screenshots/youtube-video-cards.png)
+
 ---
 
 ## Sobre o projeto
