@@ -6,7 +6,7 @@ Projeto desenvolvido como desafio prático de **CSS Grid**, com o objetivo de re
 
 O projeto faz parte da minha formação complementar em desenvolvimento Front-end pela **DIO** e foi utilizado para consolidar conhecimentos em **CSS Grid, Flexbox, organização de componentes, posicionamento e estruturação visual de interfaces**.
 
-🌐 **[Ver projeto online](https://dimelobarros.github.io/trilha-css-desafio-grid-layout/)**
+🌐 **[Ver projeto online](https://diegodemelo.github.io/trilha-css-desafio-grid-layout/)**
 
 ## Demonstração
 
@@ -542,7 +542,7 @@ Separação da interface em regiões com responsabilidades distintas.
 Clone o repositório:
 
 ```bash
-git clone https://github.com/dimelobarros/trilha-css-desafio-grid-layout.git
+git clone https://github.com/diegodemelo/trilha-css-desafio-grid-layout.git
 ```
 
 Entre no diretório:
@@ -607,7 +607,6 @@ Como projeto educacional, existem diferentes oportunidades de melhoria:
 - correção de identificadores HTML repetidos;
 - implementação de estados de interação;
 - otimização dos assets;
-- publicação de uma demonstração online.
 
 ---
 
@@ -632,7 +631,7 @@ JavaScript • TypeScript • React • Next.js • Node.js • PostgreSQL
 [Diego de Melo](https://br.linkedin.com/in/diego-de-melo-0a02b739b)
 
 **GitHub:**  
-[@dimelobarros](https://github.com/dimelobarros)
+[@diegodemelo](https://github.com/diegodemelo)
 
 ---
 
