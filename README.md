@@ -6,6 +6,8 @@ Projeto desenvolvido como desafio prático de **CSS Grid**, com o objetivo de re
 
 O projeto faz parte da minha formação complementar em desenvolvimento Front-end pela **DIO** e foi utilizado para consolidar conhecimentos em **CSS Grid, Flexbox, organização de componentes, posicionamento e estruturação visual de interfaces**.
 
+🌐 **[Ver projeto online](https://dimelobarros.github.io/trilha-css-desafio-grid-layout/)**
+
 ---
 
 ## Sobre o projeto
